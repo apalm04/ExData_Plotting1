@@ -1,0 +1,9 @@
+ epower<-read.delim ("household_power_consumption.txt", sep= ";", colClasses= "character")
+  list<- c("1/2/2007", "2/2/2007")
+  epower1<- epower[which(epower[, 1] %in% list),]
+  epower1[, 3]<-as.numeric(epower1 [, 3])
+  hist (epower1 [,3], col= 'red', xlab= 'Global Active Power (kilowatts)', main= "Global Active Power")
+  dev.copy(png, file= "Plot1.png")
+  dev.off()contents here
+  
+  
